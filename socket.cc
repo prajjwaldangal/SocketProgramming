@@ -5,15 +5,20 @@
 #include <sys/types.h>
 #include <arpa/inet.h>     // inet (3) functions
 #include <unistd.h>
+#include <errno.h>
+
 
 #define ECHO_PORT       (2002)
 #define MAX_LINE        (1000)
-#define LISTENQ			(500)
+#define LISTENQ			(1024)
+
+ssize_t Readline(int sockd, char *vptr, size_t maxlen);
+ssize_t Writeline(int sockd, const void *vptr, size_t n);
 
 int main() 
 {
 
-	char * buffer;
+	char buffer[MAX_LINE-1];
 
 	struct sockaddr_in servaddr;
 
@@ -47,7 +52,7 @@ int main()
 
 		// read(conn_s, buffer, MAX_LINE - 1);
 		Readline(conn_s, buffer, MAX_LINE-1);
-		
+		Writeline(conn_s, buffer, MAX_LINE-1);
 
 		close (conn_s);
 
@@ -57,7 +62,7 @@ int main()
 	
 }
 
-ssize_t Readline(int sockd, void *vptr, size_t maxlen) {
+ssize_t Readline(int sockd, char *vptr, size_t maxlen) {
     ssize_t n, rc;
     char    c, *buffer;
 
@@ -84,6 +89,28 @@ ssize_t Readline(int sockd, void *vptr, size_t maxlen) {
     }
 
     *buffer = 0;
+    return n;
+}
+
+ssize_t Writeline(int sockd, const void *vptr, size_t n) {
+    size_t      nleft;
+    ssize_t     nwritten;
+    const char *buffer;
+
+    buffer = vptr;
+    nleft  = n;
+
+    while ( nleft > 0 ) {
+	if ( (nwritten = write(sockd, buffer, nleft)) <= 0 ) {
+	    if ( errno == EINTR )
+		nwritten = 0;
+	    else
+		return -1;
+	}
+	nleft  -= nwritten;
+	buffer += nwritten;
+    }
+
     return n;
 }
 

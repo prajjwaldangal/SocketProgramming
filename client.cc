@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -6,6 +7,7 @@
 #include <unistd.h>
 #include <netdb.h>
 
+#include <string.h>
 // char * handleS()
 // {
 // 	return "ap";
@@ -17,7 +19,9 @@
 // 	return "ap";
 // }
 
-#define ECHO_PORT      (2002)
+#define ECHO_PORT       (2002)
+#define MAX_LINE		(1000)
+
 
 int main () 
 {
@@ -39,11 +43,15 @@ int main ()
 	// 		break;
 	// }
 
+	char buffer[MAX_LINE-1];
 	struct sockaddr_in servaddr;
+	short int port;                  /*  port number               */
+	char     *szAddress;             /*  Holds remote IP address   */
+    char     *szPort;                /*  Holds remote port         */
 	
 	// struct hostent *h;
 
-	// memset(&servaddr, 0, sizeof(servaddr));
+    memset(&servaddr, 0, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servaddr.sin_port = htons(ECHO_PORT);
@@ -61,6 +69,12 @@ int main ()
 	{
 		printf("Error connecting \n");
 	}
+
+	// buffer[0] = 'a';
+
+	Writeline(conn_s, buffer, MAX_LINE-1);
+	Readline(conn_s, buffer, MAX_LINE-1);
+	
 	close (conn_s);
 	// no bind required for client
 	return 0;
