@@ -18,18 +18,17 @@
 ssize_t Readline(int sockd, char *vptr, size_t maxlen);
 ssize_t Writeline(int sockd, char *vptr, size_t n);
 
-// char * handleS()
-// {
-// 	// char * msg = (char *) malloc(sizeof(char) * MAX_LINE);
+char * handleS()
+{
+	char msg[MAX_LINE-1];
+	printf("Enter the message: \n");
+	fgets(msg, MAX_LINE, stdin);
+	scanf("%s", msg);
+	char * ptr;
+	ptr = msg;
 
-// 	char msg[MAX_LINE];
-	
-// 	fgets(msg, MAX_LINE, stdin);
-// 	char * ptr;
-// 	ptr = msg;
-
-// 	return ptr;
-// }
+	return ptr;
+}
 
 // char * handleT() 
 // {
@@ -42,31 +41,25 @@ int main ()
 {
 	char choice;
 	char * msg;
-
-	char msgArr[MAX_LINE];
-
 	printf("Enter s, t, or q (lowercase): ");
 
 	scanf("%s", &choice);
 
-	printf("Enter the message: \n");
-	fgets(msgArr, MAX_LINE, stdin);
+	switch (choice)
+	{
+		case 's':
+			msg = handleS();
+			break;
+		// case 't':
+		// 	msg = handleT();
+		case 'q':
+			return 0;
+			break;
+		default:
+			break;
+	}
 
-	// switch (choice)
-	// {
-	// 	case 's':
-	// 		msg = handleS();
-	// 		break;
-	// 	// case 't':
-	// 	// 	msg = handleT();
-	// 	case 'q':
-	// 		return 0;
-	// 		break;
-	// 	default:
-	// 		break;
-	// }
-
-	printf("Message is: %c \n", *msgArr);
+	printf("Message is: %c, %c \n", *msg, *(msg + 5));
 
 	char buffer[MAX_LINE-1];
 	struct sockaddr_in servaddr;
@@ -95,8 +88,9 @@ int main ()
 		printf("Error connecting \n");
 	}
 
-	buffer[0] = 'a';
-	buffer[1] = 'b';
+	// buffer[0] = 'a';
+	// buffer[1] = 'b';
+	buffer = msg;
 
 	Writeline(conn_s, buffer, MAX_LINE-1);
 	Readline(conn_s, buffer, MAX_LINE-1);
