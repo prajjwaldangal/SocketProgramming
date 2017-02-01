@@ -13,7 +13,7 @@
 #define LISTENQ			(1024)
 
 ssize_t Readline(int sockd, char *vptr, size_t maxlen);
-ssize_t Writeline(int sockd, const void *vptr, size_t n);
+ssize_t Writeline(int sockd, char *vptr, size_t n);
 
 int main() 
 {
@@ -52,6 +52,10 @@ int main()
 
 		// read(conn_s, buffer, MAX_LINE - 1);
 		Readline(conn_s, buffer, MAX_LINE-1);
+
+		buffer[0] = 'j';
+		buffer[1] = 'k';
+
 		Writeline(conn_s, buffer, MAX_LINE-1);
 
 		close (conn_s);
@@ -92,10 +96,10 @@ ssize_t Readline(int sockd, char *vptr, size_t maxlen) {
     return n;
 }
 
-ssize_t Writeline(int sockd, const void *vptr, size_t n) {
+ssize_t Writeline(int sockd, char *vptr, size_t n) {
     size_t      nleft;
     ssize_t     nwritten;
-    const char *buffer;
+    char *buffer;
 
     buffer = vptr;
     nleft  = n;
