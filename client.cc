@@ -9,9 +9,26 @@
 
 #include <string.h>
 #include <errno.h>
+
+#include "client_helper.c"
+
+#define ECHO_PORT       (2002)
+#define MAX_LINE		(1000)
+
+ssize_t Readline(int sockd, char *vptr, size_t maxlen);
+ssize_t Writeline(int sockd, char *vptr, size_t n);
+
 // char * handleS()
 // {
-// 	return "ap";
+// 	// char * msg = (char *) malloc(sizeof(char) * MAX_LINE);
+
+// 	char msg[MAX_LINE];
+	
+// 	fgets(msg, MAX_LINE, stdin);
+// 	char * ptr;
+// 	ptr = msg;
+
+// 	return ptr;
 // }
 
 // char * handleT() 
@@ -20,31 +37,36 @@
 // 	return "ap";
 // }
 
-#define ECHO_PORT       (2002)
-#define MAX_LINE		(1000)
-
-ssize_t Readline(int sockd, char *vptr, size_t maxlen);
-ssize_t Writeline(int sockd, char *vptr, size_t n);
 
 int main () 
 {
 	char choice;
-	char *msg;
+	char * msg;
 
-	// printf("Enter s, t, or q (lowercase):\n");
-	// scanf("%s", choice);
+	char msgArr[MAX_LINE];
+
+	printf("Enter s, t, or q (lowercase): ");
+
+	scanf("%s", &choice);
+
+	printf("Enter the message: \n");
+	fgets(msgArr, MAX_LINE, stdin);
 
 	// switch (choice)
 	// {
 	// 	case 's':
 	// 		msg = handleS();
-	// 	case 't':
-	// 		msg = handleT();
+	// 		break;
+	// 	// case 't':
+	// 	// 	msg = handleT();
 	// 	case 'q':
 	// 		return 0;
+	// 		break;
 	// 	default:
 	// 		break;
 	// }
+
+	printf("Message is: %c \n", *msgArr);
 
 	char buffer[MAX_LINE-1];
 	struct sockaddr_in servaddr;
@@ -82,6 +104,10 @@ int main ()
 	
 	close (conn_s);
 	// no bind required for client
+	
+	// char * j = "apple";
+	// printf("%c %c\n", *j, *(j+1));
+
 	return 0;
 }
 
@@ -126,10 +152,11 @@ ssize_t Writeline(int sockd, char *vptr, size_t n) {
     while ( nleft > 0 ) {
 	if ( (nwritten = write(sockd, buffer, nleft)) <= 0 ) {
 	    if ( errno == EINTR )
-		nwritten = 0;
+			nwritten = 0;
 	    else
-		return -1;
+			return -1;
 	}
+
 	nleft  -= nwritten;
 	buffer += nwritten;
     }
