@@ -45,17 +45,45 @@ int main()
 			break;
 		}
 
-		read(conn_s, buffer, MAX_LINE - 1);
-
+		// read(conn_s, buffer, MAX_LINE - 1);
+		Readline(conn_s, buffer, MAX_LINE-1);
 		
 
 		close (conn_s);
 
 	}
-	
-
 	// sa_family -> AF_INET
 	// sa_data    ->    port numbers
-
 	
 }
+
+ssize_t Readline(int sockd, void *vptr, size_t maxlen) {
+    ssize_t n, rc;
+    char    c, *buffer;
+
+    buffer = vptr;
+
+    for ( n = 1; n < maxlen; n++ ) {
+	
+		if ( (rc = read(sockd, &c, 1)) == 1 ) {
+		    *buffer++ = c;
+		    if ( c == '\n' )
+			break;
+		}
+		else if ( rc == 0 ) {
+		    if ( n == 1 )
+				return 0;
+		    else
+				break;
+		}
+		else {
+		    if ( errno == EINTR )
+				continue;
+		    return -1;
+		}
+    }
+
+    *buffer = 0;
+    return n;
+}
+
