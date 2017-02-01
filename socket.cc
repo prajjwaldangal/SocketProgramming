@@ -53,6 +53,14 @@ int main()
 		// read(conn_s, buffer, MAX_LINE - 1);
 		Readline(conn_s, buffer, MAX_LINE-1);
 
+		char C_or_F[3];
+
+		C_or_F[0] = *buffer[0];
+		C_or_F[1] = *buffer[1];
+		C_or_F[2] = *buffer[2];
+
+		if 
+
 		buffer[0] = 'j';
 		buffer[1] = 'k';
 
