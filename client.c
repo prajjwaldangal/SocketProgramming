@@ -7,7 +7,6 @@
 #include <unistd.h>
 #include <netdb.h>
 
-// #include <string.h>
 #include <errno.h>
 
 #include "helper.h"
@@ -68,8 +67,9 @@ int main (int argc, char *argv[]) // should start from 1 -> argv
 	// referenced from helper.c
 	Writeline(conn_s, buffer, MAX_LINE);
 
+	// I couldn't get to the part of reading stream
 	Readline(conn_s, buffer, MAX_LINE);
-	
+
 	printf("Receive buffer %s\n", buffer);
 	
 	return 0;

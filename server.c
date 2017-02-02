@@ -47,15 +47,15 @@ int main(int argc, char *argv[])
 		}
 		Readline(conn_s, buffer, MAX_LINE);
 		char * cap_str = "CAP";
+
 		char * file_str = "FILE";
 		char * ret_str = (char *) malloc(sizeof(char) * MAX_LINE);
-		// char ret_str[MAX_LINE-1];
 		char * semi_buf = (char *) malloc(sizeof(char) * MAX_LINE-5);
-		// char semi_buf[MAX_LINE-1];
-		// char conv[4]; // convert cap_count to char
+		
 
 		printf("Received buffer: %s\n", buffer);
 
+		// related to handling case of t
 		FILE * fp;
 		char file_path[MAX_LINE-7];
 		long bytes;
@@ -78,9 +78,10 @@ int main(int argc, char *argv[])
 		}
 		printf("n_cap: %d, n_file: %d\n", n_cap, n_file);
 		int cap_count;
+
+		// this if block handles s on the server side
 		if (n_cap > n_file)
 		{
-			printf("if block\n");
 			int i = 4;
 			int n_c = 1;
 			while (n_c < 2)
@@ -103,7 +104,9 @@ int main(int argc, char *argv[])
 			printf("return string %s", ret_str);
 			printf("semi_buf: %s\n", semi_buf);
 
-		} else {
+		} else 
+		// this block handles t on the server side
+		{
 			for (int i=5; i < strlen(buffer)-1; i++) { // MAX_LINE - 1 to escape reading the last \n
 				file_path[i-5] = buffer[i];
 			}
@@ -117,12 +120,16 @@ int main(int argc, char *argv[])
 				if (fseek(fp, 0, SEEK_END) != 0) {
 					printf("Error in seeking to the end of file");
 				}
+
+				// ret_str is the buffer, we add all the requird formattin to it
 				bytes = ftell(fp);
 				printf("File size %ld\n", bytes);
 				sprintf(n_bytes, "%ld", bytes);
 				strcat(ret_str, n_bytes);
 				strcat(ret_str, "\n");
 				fclose(fp);
+				
+				// malloc was the only way I could get it to work
 				char * conv2 = malloc(sizeof(char));
 				fp = fopen(file_path, "r");
 				int c = fgetc(fp);
@@ -131,6 +138,9 @@ int main(int argc, char *argv[])
 				Writeline(conn_s, ret_str, MAX_LINE-1);
 				printf("c: %c\n", c);	
 
+				// what I understood for part two on the severside is
+				// we could have a very large text file and we would have to 
+				// write buffer over buffer until the whole file was read
 				c = fgetc(fp);
 				while (c != EOF) {
 					if (strlen(ret_str) == MAX_LINE-8){
@@ -147,7 +157,6 @@ int main(int argc, char *argv[])
 				// break;					
 			}
 		}
-		// printf("cap count: %d, new buffer: %s\n", cap_count, semi_buf);
 		Writeline(conn_s, ret_str, MAX_LINE-1);
 		close (conn_s);
 	}
