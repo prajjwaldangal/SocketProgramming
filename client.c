@@ -67,7 +67,9 @@ int main (int argc, char *argv[]) // should start from 1 -> argv
 	strcpy(buffer, msg);
 	// referenced from helper.c
 	Writeline(conn_s, buffer, MAX_LINE);
+
 	Readline(conn_s, buffer, MAX_LINE);
+	
 	printf("Receive buffer %s\n", buffer);
 	
 	return 0;

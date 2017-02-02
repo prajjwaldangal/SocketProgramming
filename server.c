@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 		// char ret_str[MAX_LINE-1];
 		char * semi_buf = (char *) malloc(sizeof(char) * MAX_LINE-5);
 		// char semi_buf[MAX_LINE-1];
-		char conv[4]; // convert cap_count to char
+		// char conv[4]; // convert cap_count to char
 
 		printf("Received buffer: %s\n", buffer);
 
@@ -107,7 +107,7 @@ int main(int argc, char *argv[])
 			for (int i=5; i < strlen(buffer)-1; i++) { // MAX_LINE - 1 to escape reading the last \n
 				file_path[i-5] = buffer[i];
 			}
-			printf("file path: %s", file_path);
+			printf("file path: %s\n", file_path);
 			fp = fopen(file_path, "r");
 			if (fp == NULL) {
 				strcat(ret_str, "9");
@@ -122,22 +122,29 @@ int main(int argc, char *argv[])
 				sprintf(n_bytes, "%ld", bytes);
 				strcat(ret_str, n_bytes);
 				strcat(ret_str, "\n");
-				int c;
-				char conv2;
+				fclose(fp);
+				char * conv2 = malloc(sizeof(char));
+				fp = fopen(file_path, "r");
+				int c = fgetc(fp);
+				sprintf(conv2, "%i", c);
+				strcat(ret_str, conv2);
+				Writeline(conn_s, ret_str, MAX_LINE-1);
+				printf("c: %c\n", c);	
+
 				c = fgetc(fp);
-				// printf("c: %c\n", c);
-				sprintf(&conv2, "%i", c);
-				strcat(ret_str, &conv2);
-				// Writeline(conn_s, ret_str, MAX_LINE-1);
-				// char c = fgetc
-				// while ((char) fgetc(fp) != EOF) {
-				// 	memset(ret_str, 0, sizeof(ret_str));
-				// 	if (strlen(ret_str) == MAX_LINE-1) {
-				// 		Writeline(conn_s, ret_str, MAX_LINE-1);
-				// 	} else {
-				// 		strcat(ret_str, getchar(fp));
-				// 	}
-				// }							
+				while (c != EOF) {
+					if (strlen(ret_str) == MAX_LINE-8){
+						Writeline(conn_s, ret_str, MAX_LINE-1);
+						memset(ret_str, 0, MAX_LINE);
+					} else {
+						c = fgetc(fp);
+						printf("C: %c", c);
+						sprintf(conv2, "%d", c);
+						strcat(ret_str, conv2);
+					}
+				}	
+				fclose(fp);	
+				// break;					
 			}
 		}
 		// printf("cap count: %d, new buffer: %s\n", cap_count, semi_buf);
