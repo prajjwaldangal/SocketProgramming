@@ -16,6 +16,7 @@ ssize_t Readline(int sockd, void *vptr, size_t maxlen) {
 	
 	if ( (rc = read(sockd, &c, 1)) == 1 ) {
 	    *buffer++ = c;
+	    // i modified these conditions to allow appropriate read
 	    if ( c == '\n') { n_c++; } 
 	    if (n_c >= 2) { break; }
 	}

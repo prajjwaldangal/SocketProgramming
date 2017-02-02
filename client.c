@@ -19,22 +19,23 @@
 #define MAX_LINE		(1000)
 .
 
-int main (int argc, char *argv[]) // should start from 1
+int main (int argc, char *argv[]) // should start from 1 -> argv
 {
+	// bunch of initializations
 	char buffer[MAX_LINE];
 	struct sockaddr_in servaddr;
 	short int port;                  /*  port number               */
 	char     *szAddress;             /*  Holds remote IP address   */
     char     *szPort;                /*  Holds remote port         */
-	
+    char choice;
+	char * msg = (char *) malloc (sizeof(char) * MAX_LINE);
 
+	// memset is required to get the connection going
     memset(&servaddr, 0, sizeof(servaddr));
-	servaddr.sin_family = AF_INET;
+	servaddr.sin_family = AF_INET;			     
 	servaddr.sin_addr.s_addr = htonl(*argv[1]);
 	servaddr.sin_port = htons(*argv[2]);
 
-	char choice;
-	char * msg = (char *) malloc (sizeof(char) * MAX_LINE);
 	printf("Enter s, t, or q (lowercase): ");
 
 	scanf("%s", &choice);
@@ -69,8 +70,8 @@ int main (int argc, char *argv[]) // should start from 1
 	}
 
 	strcpy(buffer, msg);
-	printf("msg in main-clientside %s", buffer);
 
+	// referenced from helper.c
 	Writeline(conn_s, buffer, MAX_LINE);
 	Readline(conn_s, buffer, MAX_LINE);
 	printf("Receive buffer %s\n", buffer);

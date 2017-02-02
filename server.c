@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
 				}
 				i++;	
 			}
-			sprintf(conv, "%d", cap_count);
+			sprintf(conv, "%d", cap_count);  /* converting int to string */
 			strcat(ret_str, conv);
 			strcat(ret_str, "\n");
 			strcat(ret_str, semi_buf);
