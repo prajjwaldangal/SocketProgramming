@@ -10,17 +10,17 @@
 // #include <string.h>
 #include <errno.h>
 
+#include "helper.h"
+#include "helper.c"
+
 #include "client_helper.c"
 
 #define ECHO_PORT       (2002)
 #define MAX_LINE		(1000)
 
-ssize_t Readline(int sockd, char *vptr, size_t maxlen);
-ssize_t Writeline(int sockd, char *vptr, size_t n);
-
 int main () 
 {
-	char buffer[MAX_LINE-1];
+	char buffer[MAX_LINE];
 	struct sockaddr_in servaddr;
 	short int port;                  /*  port number               */
 	char     *szAddress;             /*  Holds remote IP address   */
@@ -33,7 +33,7 @@ int main ()
 	servaddr.sin_port = htons(ECHO_PORT);
 
 	char choice;
-	char * msg;
+	char * msg = (char *) malloc (sizeof(char) * MAX_LINE);
 	printf("Enter s, t, or q (lowercase): ");
 
 	scanf("%s", &choice);
@@ -66,75 +66,18 @@ int main ()
 		printf("Error connecting \n");
 	}
 
-	// buffer[0] = 'a';
-	// buffer[1] = 'b';
-
-	printf("Message at client line 71: %c %c \n", *msg, *(msg + 5));
 	strcpy(buffer, msg);
+	printf("msg in main-clientside %s", buffer);
 
-	Writeline(conn_s, buffer, MAX_LINE-1);
-	// Readline(conn_s, buffer, MAX_LINE-1);
+	Writeline(conn_s, buffer, MAX_LINE);
+	Readline(conn_s, buffer, MAX_LINE);
+	printf("Receive buffer %s\n", buffer);
 	// printf("%c, %c\n", buffer[0], buffer[1]);
 	
-	close (conn_s);
+	// close (conn_s);
 	// no bind required for client
 	
 	return 0;
-}
-
-
-
-ssize_t Readline(int sockd, char *vptr, size_t maxlen) {
-    ssize_t n, rc;
-    char    c, *buffer;
-
-    buffer = vptr;
-
-    for ( n = 1; n < maxlen; n++ ) {
-	
-		if ( (rc = read(sockd, &c, 1)) == 1 ) {
-		    *buffer++ = c;
-		    if ( c == '\n' )
-			break;
-		}
-		else if ( rc == 0 ) {
-		    if ( n == 1 )
-				return 0;
-		    else
-				break;
-		}
-		else {
-		    if ( errno == EINTR )
-				continue;
-		    return -1;
-		}
-    }
-
-    *buffer = 0;
-    return n;
-}
-
-ssize_t Writeline(int sockd, char *vptr, size_t n) {
-    size_t      nleft;
-    ssize_t     nwritten;
-    char *buffer;
-
-    buffer = vptr;
-    nleft  = n;
-
-    while ( nleft > 0 ) {
-	if ( (nwritten = write(sockd, buffer, nleft)) <= 0 ) {
-	    if ( errno == EINTR )
-			nwritten = 0;
-	    else
-			return -1;
-	}
-
-	nleft  -= nwritten;
-	buffer += nwritten;
-    }
-
-    return n;
 }
 
 

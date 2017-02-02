@@ -25,9 +25,17 @@ char * handleS()
 char * handleT() 
 {
 	char * file_str = "FILE";
+	char * msg_comp = (char *) malloc(sizeof(char) * MAX_LINE);
+	strcat(msg_comp, file_str);
+	strcat(msg_comp, &newLineChar);
 
+	char * msg = (char *) malloc(sizeof(char) * MAX_LINE-6);
+	printf("Enter the message: \n");
+	fgets(msg, MAX_LINE, stdin);
+	scanf("%s", msg);
 
-		// printf("client helper, msg_comp: %c, ptr: %c\n", msg_comp[0], *ptr);
+	strcat(msg_comp, msg);
+	strcat(msg_comp, &newLineChar);
 
-	return "ap";
+	return msg_comp;
 }
