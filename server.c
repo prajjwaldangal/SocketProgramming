@@ -98,8 +98,6 @@ int main(int argc, char *argv[])
 			// for (int i=0; i < str)
 
 			sprintf(ret_str, "%i", cap_count);  /* converting int to string */
-			// sprintf(ret_str, "%s", "\n");
-			// sprintf(ret_str, "%s", semi_buf);
 			strcat(ret_str, "\n");
 			strcat(ret_str, semi_buf);
 			printf("return string %s", ret_str);
@@ -121,10 +119,15 @@ int main(int argc, char *argv[])
 				}
 				bytes = ftell(fp);
 				printf("File size %ld\n", bytes);
-				sprintf(n_bytes, "%d", bytes);
+				sprintf(n_bytes, "%ld", bytes);
 				strcat(ret_str, n_bytes);
 				strcat(ret_str, "\n");
-				// strcat(ret_str, getchar(fp));
+				int c;
+				char conv2;
+				c = fgetc(fp);
+				// printf("c: %c\n", c);
+				sprintf(&conv2, "%i", c);
+				strcat(ret_str, &conv2);
 				// Writeline(conn_s, ret_str, MAX_LINE-1);
 				// char c = fgetc
 				// while ((char) fgetc(fp) != EOF) {
