@@ -17,8 +17,9 @@
 
 #define ECHO_PORT       (2002)
 #define MAX_LINE		(1000)
+.
 
-int main () 
+int main (int argc, char *argv[]) // should start from 1
 {
 	char buffer[MAX_LINE];
 	struct sockaddr_in servaddr;
@@ -29,8 +30,8 @@ int main ()
 
     memset(&servaddr, 0, sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	servaddr.sin_port = htons(ECHO_PORT);
+	servaddr.sin_addr.s_addr = htonl(*argv[1]);
+	servaddr.sin_port = htons(*argv[2]);
 
 	char choice;
 	char * msg = (char *) malloc (sizeof(char) * MAX_LINE);
@@ -45,6 +46,7 @@ int main ()
 			break;
 		case 't':
 			msg = handleT();
+			break;
 		case 'q':
 			return 0;
 			break;
@@ -72,10 +74,6 @@ int main ()
 	Writeline(conn_s, buffer, MAX_LINE);
 	Readline(conn_s, buffer, MAX_LINE);
 	printf("Receive buffer %s\n", buffer);
-	// printf("%c, %c\n", buffer[0], buffer[1]);
-	
-	// close (conn_s);
-	// no bind required for client
 	
 	return 0;
 }
