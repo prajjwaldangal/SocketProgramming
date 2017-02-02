@@ -1,0 +1,1108 @@
+Last login: Wed Feb  1 12:05:01 on ttys004
+prajjwaldangal@Prajjwals-MacBook-Pro:~$ sudo port select --list gcc
+Password:
+sudo: port: command not found
+prajjwaldangal@Prajjwals-MacBook-Pro:~$ brew install port
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 2 taps (homebrew/core, homebrew/science).
+==> New Formulae
+homebrew/science/adapterremoval
+homebrew/science/anvio
+homebrew/science/centrifuge
+homebrew/science/trans_proteomic_pipeline
+protobuf@3.1
+sourcery
+==> Updated Formulae
+ansible@1.9                              juju@1.25
+ansible@2.0                              kibana
+apache-spark@1.5                         knot
+apache-spark@1.6                         libcec
+armor                                    libcouchbase
+automake@1.12                            libevent
+aws-sdk-cpp                              libuv
+babl                                     lighttpd
+bit                                      lldpd
+catimg                                   luabind
+checkstyle                               mapnik
+conan                                    media-info
+coturn                                   mediaconch
+crystal-icr                              memcached
+crystal-lang                             memcacheq
+deis                                     meson
+dnscrypt-wrapper                         mikutter
+elasticsearch                            minimal-racket
+elasticsearch@1.7                        mldonkey
+elasticsearch@2.4                        mongo-c-driver
+exiftool                                 mps-youtube
+fdroidserver                             mr
+folly                                    mscgen
+fonttools                                neofetch
+fq                                       node ✔
+fragroute                                node@0.10
+fwup                                     node@0.12
+fzf                                      node@4
+gd                                       node@5
+gearman                                  node@6
+geckodriver                              nomad
+git-ftp                                  nsd
+gitlab-ci-multi-runner                   nylon
+gnumeric                                 oath-toolkit
+gnuplot                                  ocproxy
+goffice                                  ola
+grok                                     open-mpi
+gst-editing-services                     osh
+gst-libav                                osrm-backend
+gst-plugins-bad                          pandoc
+gst-plugins-base                         pgbouncer
+gst-plugins-good                         plplot
+gst-plugins-ugly                         presto
+gst-python                               profanity
+gst-rtsp-server                          protobuf-swift
+gst-validate                             pulseaudio
+gstreamer                                qt@5.5
+handbrake                                radare2
+highlighting-kate                        rancher-compose
+homebrew/science/a5                      redis
+homebrew/science/bedops                  redsocks
+homebrew/science/butterflow              remctl
+homebrew/science/cddlib                  riak
+homebrew/science/cdo                     saldl
+homebrew/science/ceres-solver            sdl2_image
+homebrew/science/cmor                    sdl_image
+homebrew/science/dealii                  sjk
+homebrew/science/fgsl                    spdylay
+homebrew/science/gfan                    sslsplit
+homebrew/science/gmt                     sstp-client
+homebrew/science/gmt4                    swig
+homebrew/science/gnudatalanguage         tmate
+homebrew/science/graph-tool              tmux
+homebrew/science/libbi                   tomcat@7
+homebrew/science/libminc                 tomcat@8.0
+homebrew/science/mbsystem                tor
+homebrew/science/mlst                    transmission
+homebrew/science/moab                    twemcache
+homebrew/science/nccmp                   unbound
+homebrew/science/nco                     upx
+homebrew/science/petsc                   uwsgi
+homebrew/science/radx                    vim
+homebrew/science/slepc                   wartremover
+homebrew/science/stringtie               webdis
+homebrew/science/sumo                    webkitgtk
+homebrew/science/trilinos                webp
+homebrew/science/xmgredit                yaz
+io                                       youtube-dl ✔
+jenkins                                  z80dasm
+jsonnet
+==> Renamed Formulae
+juju2 -> juju       juju@2.0 -> juju    lua51 -> lua@5.1    lua53 -> lua@5.3
+
+Error: No available formula with the name "port" 
+==> Searching for similarly named formulae...
+These similarly named formulae were found:
+aws-apigateway-importer    iphotoexport               portmidi
+bzr-fastimport             plan9port                  shairport
+hg-fast-export             portaudio                  shairport-sync
+To install one of them, run (for example):
+  brew install aws-apigateway-importer
+==> Searching taps...
+These formulae were found in taps:
+Caskroom/cask/battery-report
+Caskroom/cask/beatport-pro
+Caskroom/cask/colorport
+Caskroom/cask/epubmdimporter
+Caskroom/cask/importio
+Caskroom/cask/iteleport-connect
+Caskroom/cask/jdiskreport
+Caskroom/cask/macports
+Caskroom/cask/markdownmdimporter
+Caskroom/cask/marker-import
+Caskroom/cask/playgroundmdimporter
+Caskroom/cask/porthole
+Caskroom/cask/porting-kit
+Caskroom/cask/teamviewer-supportcollector
+Caskroom/cask/teleport
+Caskroom/cask/tomtom-mysports-connect
+Caskroom/cask/tranzport
+Caskroom/cask/unity-android-support-for-editor
+Caskroom/cask/unity-ios-support-for-editor
+Caskroom/cask/veraport
+Caskroom/versions/porting-kit-legacy
+To install one of them, run (for example):
+  brew install Caskroom/cask/battery-report
+prajjwaldangal@Prajjwals-MacBook-Pro:~$ 
+  [Restored Feb 2, 2017, 12:04:57 AM]
+Last login: Thu Feb  2 00:04:57 on ttys003
+prajjwaldangal@Prajjwals-MBP:~$ 
+prajjwaldangal@Prajjwals-MBP:~$ cd Documents/cs/spring17/web\ programming/
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming$ ls
+01intro.pdf		cw.html			syllabus.pdf
+02socket.pdf		cw.txt
+SocketProgramming	k
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming$ cd SocketProgramming/
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ls
+README.md	client.c	helper.c	myfile.txt
+a.out		client_helper.c	helper.h	server.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+sdfas
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfafew
+msg in main-clientside CAP
+sdfafew
+Receive buffer 7
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+fasdfs
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+myfile.txt
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+myfile.txt
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asfdafe
+msg in main-clientside CAP
+asfdafe
+Receive buffer 7
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+faefads
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asfe
+msg in main-clientside CAP
+asfe
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+dsfawe
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter the message: 
+avdgad
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+afdsfs
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+all good 
+msg in main-clientside FILE
+myfile.txt
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt
+msg in main-clientside FILE
+myfile.txt
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fasdfa
+msg in main-clientside CAP
+fasdfa
+Receive buffer 6
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+alfskjsf
+msg in main-clientside CAP
+alfskjsf
+Receive buffer 8
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfaecde
+msg in main-clientside CAP
+sdfaecde
+Receive buffer 8
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fasdf
+msg in main-clientside CAP
+fasdf
+Receive buffer 5
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfdadf
+msg in main-clientside CAP
+sfdadf
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fasdfad
+msg in main-clientside CAP
+fasdfad
+Receive buffer 7
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdfasd
+msg in main-clientside CAP
+asdfasd
+Receive buffer 7
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+afsad
+msg in main-clientside CAP
+afsad
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfdas
+msg in main-clientside CAP
+sfdas
+Receive buffer 5
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fasfdas
+Error connecting 
+msg in main-clientside CAP
+fasfdas
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdfs
+Error connecting 
+msg in main-clientside CAP
+asdfs
+Receive buffer CAP
+asdfs
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git add . 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git commit -m "Added commandline arguments"
+[master 9d993b7] Added commandline arguments
+ 4 files changed, 56 insertions(+), 35 deletions(-)
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 3.39 KiB | 0 bytes/s, done.
+Total 6 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/prajjwaldangal/SocketProgramming.git
+   a375edf..9d993b7  master -> master
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git add .
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git commit -m "added comments"
+[master 1fce781] added comments
+ 4 files changed, 10 insertions(+), 7 deletions(-)
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 747 bytes | 0 bytes/s, done.
+Total 6 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/prajjwaldangal/SocketProgramming.git
+   9d993b7..1fce781  master -> master
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:20:1: error: expected identifier or '('
+.
+^
+1 error generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfas
+Error connecting 
+Receive buffer CAP
+sdfas
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfasdf
+Error connecting 
+Receive buffer CAP
+sfasdf
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfaf
+Error connecting 
+Receive buffer CAP
+sdfaf
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:36:33: warning: incompatible integer to pointer conversion passing
+      'char' to parameter of type 'const char *'; remove * [-Wint-conversion]
+        servaddr.sin_port = htons(atoi(*argv[2]));
+                                       ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_endian.h:133:39: note: 
+      expanded from macro 'htons'
+#define htons(x)        __DARWIN_OSSwapInt16(x)
+                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:72:40: note: 
+      expanded from macro '__DARWIN_OSSwapInt16'
+    ((__uint16_t)(__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt16(x...
+                                       ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/stdlib.h:132:23: note: 
+      passing argument to parameter here
+int      atoi(const char *);
+                          ^
+client.c:36:33: warning: incompatible integer to pointer conversion passing
+      'char' to parameter of type 'const char *'; remove * [-Wint-conversion]
+        servaddr.sin_port = htons(atoi(*argv[2]));
+                                       ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_endian.h:133:39: note: 
+      expanded from macro 'htons'
+#define htons(x)        __DARWIN_OSSwapInt16(x)
+                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:72:71: note: 
+      expanded from macro '__DARWIN_OSSwapInt16'
+    ((__uint16_t)(__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt16(x) : _...
+                                                                      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:44:34: note: 
+      expanded from macro '__DARWIN_OSSwapConstInt16'
+    ((__uint16_t)((((__uint16_t)(x) & 0xff00) >> 8) | \
+                                 ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/stdlib.h:132:23: note: 
+      passing argument to parameter here
+int      atoi(const char *);
+                          ^
+client.c:36:33: warning: incompatible integer to pointer conversion passing
+      'char' to parameter of type 'const char *'; remove * [-Wint-conversion]
+        servaddr.sin_port = htons(atoi(*argv[2]));
+                                       ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_endian.h:133:39: note: 
+      expanded from macro 'htons'
+#define htons(x)        __DARWIN_OSSwapInt16(x)
+                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:72:71: note: 
+      expanded from macro '__DARWIN_OSSwapInt16'
+    ((__uint16_t)(__builtin_constant_p(x) ? __DARWIN_OSSwapConstInt16(x) : _...
+                                                                      ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:45:32: note: 
+      expanded from macro '__DARWIN_OSSwapConstInt16'
+                (((__uint16_t)(x) & 0x00ff) << 8)))
+                               ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/stdlib.h:132:23: note: 
+      passing argument to parameter here
+int      atoi(const char *);
+                          ^
+client.c:36:33: warning: incompatible integer to pointer conversion passing
+      'char' to parameter of type 'const char *'; remove * [-Wint-conversion]
+        servaddr.sin_port = htons(atoi(*argv[2]));
+                                       ^~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/sys/_endian.h:133:39: note: 
+      expanded from macro 'htons'
+#define htons(x)        __DARWIN_OSSwapInt16(x)
+                                             ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libkern/_OSByteOrder.h:72:89: note: 
+      expanded from macro '__DARWIN_OSSwapInt16'
+  ...? __DARWIN_OSSwapConstInt16(x) : _OSSwapInt16(x)))
+                                                   ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/stdlib.h:132:23: note: 
+      passing argument to parameter here
+int      atoi(const char *);
+                          ^
+4 warnings generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfasd
+Error connecting 
+Receive buffer CAP
+sdfasd
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfsa
+Error connecting 
+Receive buffer CAP
+sdfsa
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfas
+Error connecting 
+Receive buffer CAP
+sdfas
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfa
+Error connecting 
+Receive buffer CAP
+sdfa
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out INADDR_ANY 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfasd
+Error connecting 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.0 2002
+Enter s, t, or q (lowercase): ^C
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out INADDR_ANY 2002
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfas
+Error connecting 
+Receive buffer CAP
+sdfas
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:34:2: error: expected ')'
+        ParseCmdLine(argc, argv, &szAddress, &szPort);
+        ^
+client.c:32:31: note: to match this '('
+        char * msg = (char *) malloc (sizeof(char) * MAX_LINE
+                                     ^
+client.c:35:25: error: use of undeclared identifier 'endptr'
+        port = strtol(szPort, &endptr, 0);
+                               ^
+client.c:90:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning and 2 errors generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:35:25: error: use of undeclared identifier 'endptr'
+        port = strtol(szPort, &endptr, 0);
+                               ^
+client.c:90:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning and 1 error generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:91:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:95:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:95:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:95:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out 127.0.0.1 2002
+Segmentation fault: 11
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:91:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+slfda
+Error connecting 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:91:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfsa
+Receive buffer 5
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfas
+Receive buffer 5
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): t
+Enter file path: 
+myfile.txt      
+Receive buffer FILE
+myfile.txt
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfa
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sds
+Receive buffer 3
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+ffas
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+gfhd
+Receive buffer 390130028
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+safasfe
+Receive buffer 441133423
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s^C
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfa
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfa
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sadf
+Receive buffer 4
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdf
+Receive buffer 8
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfadasdf
+Receive buffer 8
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdfas
+Receive buffer 6
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fsaef
+Receive buffer 5
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfa
+Receive buffer 
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfasf
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sadfs
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fafa
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): sdfsd
+Enter the message: 
+sdf
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s   
+Enter the message: 
+asfas
+Receive buffer 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfdad
+Receive buffer SFDAD
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asfdaf
+Receive buffer ASFDAF
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+safa
+Receive buffer 1147
+SAFA
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sdfad
+Receive buffer 1147
+SDFAD
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+sfasd
+Error connecting 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fsa
+Receive buffer 1147
+FSA
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): ^C
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdfs
+fa
+^C
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): ^C
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+asdfas
+
+fasd
+Receive buffer CAP
+asdfas
+
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ fasd
+-bash: fasd: command not found
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ fasd
+-bash: fasd: command not found
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+dsfaf
+Error connecting 
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ fasd
+-bash: fasd: command not found
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ fasd
+-bash: fasd: command not found
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+client.c:77:14: warning: incompatible pointer to integer conversion assigning to
+      'char' from 'char *'; dereference with * [-Wint-conversion]
+        **szAddress = argv[1];
+                    ^ ~~~~~~~
+                      *
+1 warning generated.
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ gcc client.c
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ ./a.out
+Enter s, t, or q (lowercase): s
+Enter the message: 
+fda
+Receive buffer 3
+FDA
+prajjwaldangal@Prajjwals-MBP:~/Documents/cs/spring17/web programming/SocketProgramming$ 

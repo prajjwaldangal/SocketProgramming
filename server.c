@@ -8,7 +8,6 @@
 #include <errno.h>
 #include <ctype.h>
 #include <string.h>
-
 #include "helper.h"
 #include "helper.c"
 
@@ -22,28 +21,22 @@ int main(int argc, char *argv[])
 {
 
 	char buffer[MAX_LINE];
-
 	struct sockaddr_in servaddr;
-
 	servaddr.sin_family = AF_INET;
 	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	servaddr.sin_port = htons(*argv[1]);
-
+	servaddr.sin_port = htons(ECHO_PORT);
 	int list_s, conn_s;
 	
 	// create socket
 	list_s = socket(AF_INET, SOCK_STREAM, 0);
-	
 	// bind socket to address
 	bind(list_s, (struct sockaddr *) &servaddr, sizeof(servaddr));
-	
 	// listen
 	if (listen(list_s, LISTENQ) < 0)
 	{
 		printf("Not listening \n");
 		return 0;
 	}
-
 	while (1)
 	{
 		// accept
@@ -52,21 +45,22 @@ int main(int argc, char *argv[])
 			printf("Not accepting \n");
 			break;
 		}
-
 		Readline(conn_s, buffer, MAX_LINE);
 		char * cap_str = "CAP";
 		char * file_str = "FILE";
-
 		char * ret_str = (char *) malloc(sizeof(char) * MAX_LINE);
-		char semi_buf[MAX_LINE-5];
+		// char ret_str[MAX_LINE-1];
+		char * semi_buf = (char *) malloc(sizeof(char) * MAX_LINE-5);
+		// char semi_buf[MAX_LINE-1];
 		char conv[4]; // convert cap_count to char
 
+		printf("Received buffer: %s\n", buffer);
 
 		FILE * fp;
-		char file_path[MAX_LINE-6];
+		char file_path[MAX_LINE-7];
 		long bytes;
-		char n_bytes[MAX_LINE-2]; // this means we will have limitation as to the size of file
-		char file_buf[MAX_LINE];
+		char n_bytes[MAX_LINE-3]; // this means we will have limitation as to the size of file
+		char file_buf[MAX_LINE-1];
 
 		int n_cap = 0, n_file = 0;
 
@@ -83,28 +77,33 @@ int main(int argc, char *argv[])
 
 		}
 		printf("n_cap: %d, n_file: %d\n", n_cap, n_file);
-		int cap_count = 0;
+		int cap_count;
 		if (n_cap > n_file)
 		{
 			printf("if block\n");
-			int i = 3;
+			int i = 4;
 			int n_c = 1;
-			while (n_c < 3)
+			while (n_c < 2)
 			{
 				if (buffer[i] == '\n')
 				{
 					n_c++;
 				} else {
-					semi_buf[i-3] = toupper(buffer[i]);
+					* (semi_buf+ i-4) = toupper(buffer[i]);
 					cap_count++;
 				}
 				i++;	
 			}
-			sprintf(conv, "%d", cap_count);  /* converting int to string */
-			strcat(ret_str, conv);
+			printf("str len %lu\n", strlen(buffer));
+			// for (int i=0; i < str)
+
+			sprintf(ret_str, "%i", cap_count);  /* converting int to string */
+			// sprintf(ret_str, "%s", "\n");
+			// sprintf(ret_str, "%s", semi_buf);
 			strcat(ret_str, "\n");
 			strcat(ret_str, semi_buf);
 			printf("return string %s", ret_str);
+			printf("semi_buf: %s\n", semi_buf);
 
 		} else {
 			for (int i=5; i < strlen(buffer)-1; i++) { // MAX_LINE - 1 to escape reading the last \n
@@ -124,15 +123,18 @@ int main(int argc, char *argv[])
 				printf("File size %ld\n", bytes);
 				sprintf(n_bytes, "%d", bytes);
 				strcat(ret_str, n_bytes);
-				strcat(ret_str, '\n');
-				// read one character -> writeline
-				// while not eof:
-					// read max_line char -> writeline
-				// do this until eof
-
+				strcat(ret_str, "\n");
+				// strcat(ret_str, getchar(fp));
 				// Writeline(conn_s, ret_str, MAX_LINE-1);
-				// int bytes_read = read(fp, )
-							
+				// char c = fgetc
+				// while ((char) fgetc(fp) != EOF) {
+				// 	memset(ret_str, 0, sizeof(ret_str));
+				// 	if (strlen(ret_str) == MAX_LINE-1) {
+				// 		Writeline(conn_s, ret_str, MAX_LINE-1);
+				// 	} else {
+				// 		strcat(ret_str, getchar(fp));
+				// 	}
+				// }							
 			}
 		}
 		// printf("cap count: %d, new buffer: %s\n", cap_count, semi_buf);
