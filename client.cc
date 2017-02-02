@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <netdb.h>
 
-#include <string.h>
+// #include <string.h>
 #include <errno.h>
 
 #include "client_helper.c"
@@ -18,27 +18,20 @@
 ssize_t Readline(int sockd, char *vptr, size_t maxlen);
 ssize_t Writeline(int sockd, char *vptr, size_t n);
 
-char * handleS()
-{
-	char msg[MAX_LINE-1];
-	printf("Enter the message: \n");
-	fgets(msg, MAX_LINE, stdin);
-	scanf("%s", msg);
-	char * ptr;
-	ptr = msg;
-
-	return ptr;
-}
-
-// char * handleT() 
-// {
-
-// 	return "ap";
-// }
-
-
 int main () 
 {
+	char buffer[MAX_LINE-1];
+	struct sockaddr_in servaddr;
+	short int port;                  /*  port number               */
+	char     *szAddress;             /*  Holds remote IP address   */
+    char     *szPort;                /*  Holds remote port         */
+	
+
+    memset(&servaddr, 0, sizeof(servaddr));
+	servaddr.sin_family = AF_INET;
+	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	servaddr.sin_port = htons(ECHO_PORT);
+
 	char choice;
 	char * msg;
 	printf("Enter s, t, or q (lowercase): ");
@@ -50,30 +43,15 @@ int main ()
 		case 's':
 			msg = handleS();
 			break;
-		// case 't':
-		// 	msg = handleT();
+		case 't':
+			msg = handleT();
 		case 'q':
 			return 0;
 			break;
 		default:
 			break;
 	}
-
-	printf("Message is: %c, %c \n", *msg, *(msg + 5));
-
-	char buffer[MAX_LINE-1];
-	struct sockaddr_in servaddr;
-	short int port;                  /*  port number               */
-	char     *szAddress;             /*  Holds remote IP address   */
-    char     *szPort;                /*  Holds remote port         */
 	
-	// struct hostent *h;
-
-    memset(&servaddr, 0, sizeof(servaddr));
-	servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	servaddr.sin_port = htons(ECHO_PORT);
-
 	int conn_s;
 
 	// create socket
@@ -90,20 +68,21 @@ int main ()
 
 	// buffer[0] = 'a';
 	// buffer[1] = 'b';
-	buffer = msg;
+
+	printf("Message at client line 71: %c %c \n", *msg, *(msg + 5));
+	strcpy(buffer, msg);
 
 	Writeline(conn_s, buffer, MAX_LINE-1);
-	Readline(conn_s, buffer, MAX_LINE-1);
-	printf("%c, %c\n", buffer[0], buffer[1]);
+	// Readline(conn_s, buffer, MAX_LINE-1);
+	// printf("%c, %c\n", buffer[0], buffer[1]);
 	
 	close (conn_s);
 	// no bind required for client
 	
-	// char * j = "apple";
-	// printf("%c %c\n", *j, *(j+1));
-
 	return 0;
 }
+
+
 
 ssize_t Readline(int sockd, char *vptr, size_t maxlen) {
     ssize_t n, rc;
